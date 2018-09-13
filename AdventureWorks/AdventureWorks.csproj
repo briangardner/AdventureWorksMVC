@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -147,7 +155,76 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\Address.cs" />
+    <Compile Include="DAL\AddressType.cs" />
+    <Compile Include="DAL\AdventureWorksContext.cs" />
+    <Compile Include="DAL\BillOfMaterial.cs" />
+    <Compile Include="DAL\BusinessEntity.cs" />
+    <Compile Include="DAL\BusinessEntityAddress.cs" />
+    <Compile Include="DAL\BusinessEntityContact.cs" />
+    <Compile Include="DAL\ContactType.cs" />
+    <Compile Include="DAL\CountryRegion.cs" />
+    <Compile Include="DAL\CountryRegionCurrency.cs" />
+    <Compile Include="DAL\CreditCard.cs" />
+    <Compile Include="DAL\Culture.cs" />
+    <Compile Include="DAL\Currency.cs" />
+    <Compile Include="DAL\CurrencyRate.cs" />
+    <Compile Include="DAL\Customer.cs" />
+    <Compile Include="DAL\Department.cs" />
+    <Compile Include="DAL\EmailAddress.cs" />
+    <Compile Include="DAL\Employee.cs" />
+    <Compile Include="DAL\EmployeeDepartmentHistory.cs" />
+    <Compile Include="DAL\EmployeePayHistory.cs" />
+    <Compile Include="DAL\Illustration.cs" />
+    <Compile Include="DAL\JobCandidate.cs" />
+    <Compile Include="DAL\Location.cs" />
+    <Compile Include="DAL\Password.cs" />
+    <Compile Include="DAL\Person.cs" />
+    <Compile Include="DAL\PersonCreditCard.cs" />
+    <Compile Include="DAL\PersonPhone.cs" />
+    <Compile Include="DAL\PhoneNumberType.cs" />
+    <Compile Include="DAL\Product.cs" />
+    <Compile Include="DAL\ProductCategory.cs" />
+    <Compile Include="DAL\ProductCostHistory.cs" />
+    <Compile Include="DAL\ProductDescription.cs" />
+    <Compile Include="DAL\ProductDocument.cs" />
+    <Compile Include="DAL\ProductInventory.cs" />
+    <Compile Include="DAL\ProductListPriceHistory.cs" />
+    <Compile Include="DAL\ProductModel.cs" />
+    <Compile Include="DAL\ProductModelIllustration.cs" />
+    <Compile Include="DAL\ProductModelProductDescriptionCulture.cs" />
+    <Compile Include="DAL\ProductPhoto.cs" />
+    <Compile Include="DAL\ProductProductPhoto.cs" />
+    <Compile Include="DAL\ProductReview.cs" />
+    <Compile Include="DAL\ProductSubcategory.cs" />
+    <Compile Include="DAL\ProductVendor.cs" />
+    <Compile Include="DAL\PurchaseOrderDetail.cs" />
+    <Compile Include="DAL\PurchaseOrderHeader.cs" />
+    <Compile Include="DAL\SalesOrderDetail.cs" />
+    <Compile Include="DAL\SalesOrderHeader.cs" />
+    <Compile Include="DAL\SalesOrderHeaderSalesReason.cs" />
+    <Compile Include="DAL\SalesPerson.cs" />
+    <Compile Include="DAL\SalesPersonQuotaHistory.cs" />
+    <Compile Include="DAL\SalesReason.cs" />
+    <Compile Include="DAL\SalesTaxRate.cs" />
+    <Compile Include="DAL\SalesTerritory.cs" />
+    <Compile Include="DAL\SalesTerritoryHistory.cs" />
+    <Compile Include="DAL\ScrapReason.cs" />
+    <Compile Include="DAL\Shift.cs" />
+    <Compile Include="DAL\ShipMethod.cs" />
+    <Compile Include="DAL\ShoppingCartItem.cs" />
+    <Compile Include="DAL\SpecialOffer.cs" />
+    <Compile Include="DAL\SpecialOfferProduct.cs" />
+    <Compile Include="DAL\StateProvince.cs" />
+    <Compile Include="DAL\Store.cs" />
+    <Compile Include="DAL\TransactionHistory.cs" />
+    <Compile Include="DAL\TransactionHistoryArchive.cs" />
+    <Compile Include="DAL\UnitMeasure.cs" />
+    <Compile Include="DAL\Vendor.cs" />
+    <Compile Include="DAL\WorkOrder.cs" />
+    <Compile Include="DAL\WorkOrderRouting.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +269,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
